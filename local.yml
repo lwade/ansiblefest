@@ -1,0 +1,10 @@
+- name: Create a file
+  hosts: local
+  user: ec2-user
+
+  tasks:
+
+  - name: Create a file
+    action: command mkdir /tmp/testcmd creates=/tmp/testcmd
+
+
