@@ -4,7 +4,19 @@
 
   tasks:
 
-  - name: Create a file
-    action: command mkdir /tmp/testcmd creates=/tmp/testcmd
+  - name: Install packages
+    yum: name={{ item }} state=latest
+    with_items:
+    - httpd
+    
+  - name: Copy web content
+    copy: src=files/index.html dest=/var/www/html/index.html owner=root group=root
+    notify:
+    - restart apache
+
+  handlers:
+
+  - name: restart apache
+    service: name=httpd state=restarted
 
 
