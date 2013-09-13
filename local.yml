@@ -8,6 +8,7 @@
     yum: name={{ item }} state=latest
     with_items:
     - httpd
+    - stress
     
   - name: Copy web content
     copy: src=files/index.html dest=/var/www/html/index.html owner=root group=root
