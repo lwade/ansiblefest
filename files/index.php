@@ -7,6 +7,6 @@
 <H1>Test web page...</H1>
 
 <?php
-$IP = $_SERVER['REMOTE_ADDR']; // Get IP
+$IP = $_SERVER['SERVER_ADDR']; // Get IP
 echo "The private IP of this instance is: <strong>$IP</strong>";
 ?>
