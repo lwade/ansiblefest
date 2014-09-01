@@ -10,7 +10,7 @@
     - stress
     
   - name: Copy web content
-    copy: src=files/index.html dest=/var/www/html/index.html owner=root group=root
+    copy: src=files/index.php dest=/var/www/html/index.php owner=root group=root
     notify:
     - restart apache
 
