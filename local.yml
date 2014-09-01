@@ -1,6 +1,5 @@
-- name: Create a file
-  hosts: local
-  user: ec2-user
+- name: configure httpd
+  hosts: localhost
 
   tasks:
 
