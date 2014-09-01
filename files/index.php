@@ -8,5 +8,5 @@
 
 <?php
 $IP = $_SERVER['REMOTE_ADDR']; // Get IP
-echo "My localmachine's IP address is: <strong>$IP</strong>";
+echo "The private IP of this instance is: <strong>$IP</strong>";
 ?>
