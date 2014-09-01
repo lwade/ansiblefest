@@ -7,5 +7,6 @@
 <H1>Test web page...</H1>
 
 <?php
-echo $_SERVER['SERVER_NAME'];
+$IP = $_SERVER['REMOTE_ADDR']; // Get IP
+echo "My localmachine's IP address is: <strong>$IP</strong>";
 ?>
